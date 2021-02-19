@@ -1,6 +1,6 @@
 ## Description
 
-The purpose of this project is to create a PostGIS local database containing all possible administrative divisions of all countries of the world. Then this database can be accessed through all your GIS softwares without internet conexion : QGIS ArcGIS, R, etc.
+The purpose of this project is to create a PostGIS local database containing all possible administrative divisions of all countries of the world. Then this database can be accessed through all your GIS softwares without internet connexion : QGIS ArcGIS, R, etc.
 
 
 ## Why a PostGIS database ?
@@ -42,6 +42,8 @@ If the country has less than 6 administrative levels, smaller mesh inherits geog
 + level 5 : Counties
 
 However, the data downloaded contains only 1 table with the smaller mesh, the level 5. In order to have different ready-to-use administrative geometries, we aggregate successively each level with `St_Union` PostGIS function.
+
+In the end, we have a database of 6 tables which can be queried easily.
 
 
 ## Other possible data sources
